@@ -98,7 +98,7 @@ body {
   margin-bottom: 25px;
 }
 .current__time {
-  font-size: 8px;
+  font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.6px;
 }
@@ -115,7 +115,7 @@ body {
   border-radius: 5px;
 }
 .total__time {
-  font-size: 8px;
+  font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.6px;
 }
@@ -146,7 +146,7 @@ body {
 
 .queue__box {
   width: 100%;
-  background-color: rgb(236, 232, 232);
+  background-color: rgb(245, 240, 240);
   padding: 8px;
   border-radius: 3px;
 }
@@ -391,6 +391,7 @@ body {
   .queue__list__img6 {
     width: 90px;
     height: 90px;
+    transition: all 0.5s;
   }
   .queue__list__title {
     font-size: 1.2rem;
@@ -466,19 +467,22 @@ body {
     margin: 6px 0 20px 0;
   }
   .current__time {
-    font-size: 8px;
+    font-size: 10px;
   }
   .total__time {
-    font-size: 8px;
+    font-size: 10px;
   }
   .seek {
     width: 82%;
     height: 4px;
   }
+  .seek__timer {
+    height: 4px;
+  }
 
   .controls {
     width: 50%;
-    margin: 18px;
+    margin: 10px;
   }
 
   .prev i {
@@ -492,9 +496,9 @@ body {
   }
   .queue__box {
     width: 95%;
-    margin: 40px auto;
-    padding: 22px 10px;
-    border-radius: 5px;
+    margin: 30px auto;
+    padding: 20px 10px;
+    border-radius: 15px;
   }
   .queue__toptext {
     font-size: 1.2rem;
@@ -507,8 +511,9 @@ body {
     font-size: 0.6rem;
   }
   .queue__img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+    transition: all 0.5s;
   }
   .queue__songtxt {
     width: 45%;
