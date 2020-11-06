@@ -252,7 +252,7 @@ body {
 .queue__list__box:hover {
   transform: scale(1.02);
   transition: all 0.2s;
-  background-color: rgb(179, 179, 179);
+  background-color: rgb(99, 232, 250);
 }
 .queue__list__box img,
 .queue__list__box .queue__list__title,
