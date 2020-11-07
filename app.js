@@ -19,19 +19,20 @@ const openQueue2 = document.querySelector(".queue2");
 const queueExit = document.querySelector(".queue__header__text");
 
 
-const name = ["Believer","Friends","Dirty Sexy Money","BadBoy","Steal My Girl","When I Grow Up"];
+const name = ["Believer","Friends","Dirty Sexy Money","BadBoy","Steal My Girl","When I Grow Up", "Arms Around You", "By Your Side", "Cry For Me", "Hello My Love", "I See Love", "Sucker", "Sugars and Brownies"];
 
-const title = ["Believer - Imagine Dragons - Believer","FRIENDS - Marshmello","Dirty Sexy Money (feat. Charlie XCX)","Bad Boy (feat. Luana Kiara)","Steal My Girl - One Direction","When I Grow Up - Dimitri Vagas"];
-
-
-const img = ["./images/believer.jpg","./images/friends.jpg","./images/dirtysexymoney.jpg","./images/badboy.jpg","./images/stealmygirl.jpg","./images/whenigrowup.jpg"];
-
-const src = ["./songs/believer.mp3","./songs/friends.mp3","./songs/dirtysexymoney.mp3","./songs/badboy.mp3","./songs/stealmygirl.mp3","./songs/whenigrowup.mp3"];
-
-const info = ["Imagine Dragons - Believer", "Marshmello - FRIENDS", "David Guetta - Dirty Sexy Money", "Tungevaag Raaban - Bad Boy", "One Direction - Steal My Girl", "Dimitri Vegas - When I Grow Up"];
+const title = ["Believer - Imagine Dragons - Believer","FRIENDS - Marshmello","Dirty Sexy Money (feat. Charlie XCX)","Bad Boy (feat. Luana Kiara)","Steal My Girl - One Direction","When I Grow Up - Dimitri Vagas", "Arms Around You - XXXTENTACION", "By Your Side - Jonas Blue ", "Cry For Me -  Camila Cabello ", "Hello My Love - Westlife", "I See Love - Jonas Blue", "Sucker - Jonas Brothers ", "Sugars and Brownies - Dharia"];
 
 
-const bgColorInfo = ["rgb(255, 174, 0)", "rgb(180, 179, 179)", "rgb(165, 83, 7)", "rgb(58, 177, 171)", "rgb(197, 199, 199)", "rgb(5, 113, 255)"];
+const img = ["./images/believer.jpg","./images/friends.jpg","./images/dirtysexymoney.jpg","./images/badboy.jpg","./images/stealmygirl.jpg","./images/whenigrowup.jpg", "./images/armsaroundyou.jpg", "./images/byyourside.jpg", "./images/cryforme.png", "./images/hellomylove.png", "./images/iseelove.jpg", "./images/sucker.png", "./images/sugarsandbrownies.jpg"];
+
+const src = ["./songs/believer.mp3","./songs/friends.mp3","./songs/dirtysexymoney.mp3","./songs/badboy.mp3","./songs/stealmygirl.mp3","./songs/whenigrowup.mp3", "./songs/armsaroundyou.mp3", "./songs/byyourside.mp3", "./songs/cryforme.mp3", "./songs/hellomylove.mp3", "./songs/iseelove.mp3", "./songs/sucker.mp3", "./songs/sugarsandbrownie.mp3"];
+
+
+const info = ["Imagine Dragons - Believer", "Marshmello - FRIENDS", "David Guetta - Dirty Sexy Money", "Tungevaag Raaban - Bad Boy", "One Direction - Steal My Girl", "Dimitri Vegas - When I Grow Up", "XXXTENTACION - Arms Around You", "Jonas Blue - By Your Side", "Camila Cabello - Cry for Me", " Westlife - Hello My Love", "Jonas Blue - I See Love", "Jonas Brothers - Sucker", " Dharia - Sugar & Brownies"];
+
+
+const bgColorInfo = ["rgb(255, 174, 0)", "rgb(180, 179, 179)", "rgb(165, 83, 7)", "rgb(58, 177, 171)", "rgb(197, 199, 199)", "rgb(5, 113, 255)", "rgb(255, 45, 45))", "rgb(1, 150, 250)", "rgb(248, 170, 69)", "rgb(0, 255, 136)", "rgb(89, 247, 247)", " rgb(240, 132, 45)", " rgb(247, 68, 68)",];
 
 controlPlay.addEventListener('click', (e) => {
     e.preventDefault();
@@ -71,6 +72,10 @@ audio.src = src[s];
 audio.play()
 // forHighlight(currentSong)
 }
+if(audio.ended){
+    playNext()
+}
+
 
 function removeClass() {
     queueListBox.forEach((box)=> {
@@ -99,7 +104,6 @@ queueListBox.forEach((box, index)=> {
 
 
 
-
 checkSelected()
 
 
@@ -116,6 +120,7 @@ controlPlay.innerHTML = "<i class='fas fa-pause-circle'></i>";
 audio.addEventListener("timeupdate", (e)=> {
 e.preventDefault();
 let pos = audio.currentTime / audio.duration;
+console.log(pos)
 seekTimer.style.width = pos * 100 + "%";
 changingTime(Math.round(audio.currentTime))
 })
@@ -141,7 +146,7 @@ function actualTime(s) {
 function playNext() {
 currentSong++;
 
-if(currentSong > 5) {
+if(currentSong > 12) {
     currentSong = 0;
 }
 songTitle.innerHTML= `${title[currentSong]}<i class="fas fa-chevron-right"></i>`;
@@ -159,7 +164,7 @@ function playPrev() {
 
     currentSong--;
     if(currentSong < 0) {
-        currentSong = 5;
+        currentSong = 12;
     }
     songTitle.innerHTML= `${title[currentSong]}<i class="fas fa-chevron-right"></i>`;
     var bgimg = 'url(' + img[currentSong] + ')'
@@ -180,10 +185,10 @@ controlPlay.innerHTML = "<i class='fas fa-pause-circle'></i>";
 }
 
 function changeQueueInfo(i) {
-    if(i== 5){
-        queueImg.style.backgroundImage = 'url(' +  img[i - 5]   + ')'
-        queueTitle.textContent = name[i- 5]
-        queueInfo.textContent = info[i- 5]
+    if(i== 12){
+        queueImg.style.backgroundImage = 'url(' +  img[i - 12]   + ')'
+        queueTitle.textContent = name[i- 12]
+        queueInfo.textContent = info[i- 12]
     
     }else{
     queueImg.style.backgroundImage = 'url(' +  img[i + 1]   + ')'

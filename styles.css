@@ -216,6 +216,8 @@ body {
 .queue__container {
   width: 245px;
   height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
   margin: auto auto;
   background-color: rgb(248, 247, 247);
   /* transform: scale(0);
@@ -264,7 +266,7 @@ body {
   background-color: rgb(99, 232, 250);
   transition: all 1s;
 }
-.queue__list__img1 {
+.queue__list__img0 {
   width: 45px;
   height: 45px;
   background-image: url("./images/believer.jpg");
@@ -272,7 +274,7 @@ body {
   background-size: cover;
   border-radius: 5px;
 }
-.queue__list__img2 {
+.queue__list__img1 {
   width: 45px;
   height: 45px;
   background-image: url("./images/friends.jpg");
@@ -280,7 +282,7 @@ body {
   background-size: cover;
   border-radius: 5px;
 }
-.queue__list__img3 {
+.queue__list__img2 {
   width: 45px;
   height: 45px;
   background-image: url("./images/dirtysexymoney.jpg");
@@ -288,7 +290,7 @@ body {
   background-size: cover;
   border-radius: 5px;
 }
-.queue__list__img4 {
+.queue__list__img3 {
   width: 45px;
   height: 45px;
   background-image: url("./images/badboy.jpg");
@@ -296,7 +298,7 @@ body {
   background-size: cover;
   border-radius: 5px;
 }
-.queue__list__img5 {
+.queue__list__img4 {
   width: 45px;
   height: 45px;
   background-image: url("./images/stealmygirl.jpg");
@@ -304,10 +306,66 @@ body {
   background-size: cover;
   border-radius: 5px;
 }
-.queue__list__img6 {
+.queue__list__img5 {
   width: 45px;
   height: 45px;
   background-image: url("./images/whenigrowup.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+.queue__list__img6 {
+  width: 45px;
+  height: 45px;
+  background-image: url("./images/armsaroundyou.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+.queue__list__img7 {
+  width: 45px;
+  height: 45px;
+  background-image: url("./images/byyourside.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+.queue__list__img8 {
+  width: 45px;
+  height: 45px;
+  background-image: url("./images/cryforme.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+.queue__list__img9 {
+  width: 45px;
+  height: 45px;
+  background-image: url("./images/hellomylove.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+.queue__list__img10 {
+  width: 45px;
+  height: 45px;
+  background-image: url("./images/iseelove.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+.queue__list__img11 {
+  width: 45px;
+  height: 45px;
+  background-image: url("./images/sucker.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+.queue__list__img12 {
+  width: 45px;
+  height: 45px;
+  background-image: url("./images/sugarsandbrownies.jpg");
   background-position: center;
   background-size: cover;
   border-radius: 5px;
@@ -385,12 +443,19 @@ body {
     transition: none;
   }
 
+  .queue__list__img0,
   .queue__list__img1,
   .queue__list__img2,
   .queue__list__img3,
   .queue__list__img4,
   .queue__list__img5,
-  .queue__list__img6 {
+  .queue__list__img6,
+  .queue__list__img7,
+  .queue__list__img8,
+  .queue__list__img9,
+  .queue__list__img10,
+  .queue__list__img11,
+  .queue__list__img12 {
     width: 90px;
     height: 90px;
     transition: all 0.5s;
